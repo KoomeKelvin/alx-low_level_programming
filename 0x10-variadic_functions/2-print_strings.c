@@ -1,9 +1,9 @@
 #include "variadic_functions.h"
 
 /**
- *print_strings - function to print strings
- *@separator: Used to separate strings
- *@n: number of strings passed to function
+ * print_strings - prints strings
+ * @separator: separator between strings
+ * @n: number of arguments
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -18,13 +18,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(list, char *);
 		if (!str)
-			str = "nil";
-		if(!separator)
+			str = "(nil)";
+		if (!separator)
 			printf("%s", str);
-		else if (separator && i  == 0)
+		else if (separator && i == 0)
 			printf("%s", str);
 		else
-			printf("%s%s", separator, str);	
+			printf("%s%s", separator, str);
 	}
 
 	printf("\n");
