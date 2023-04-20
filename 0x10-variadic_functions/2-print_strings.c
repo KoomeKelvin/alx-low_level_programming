@@ -1,9 +1,9 @@
 #include "variadic_functions.h"
 
 /**
- *Print_strings: function to print strings
+ *print_strings - function to print strings
  *@separator: Used to separate strings
- *@n number of strings passed to function
+ *@n: number of strings passed to function
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -26,7 +26,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s%s", separator, str);	
 	}
-
 
 	printf("\n");
 
